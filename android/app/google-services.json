@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1025504039976",
+    "project_id": "authorizaton-tutorial",
+    "storage_bucket": "authorizaton-tutorial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025504039976:android:49e6a8aa305e64699ed11d",
+        "android_client_info": {
+          "package_name": "com.example.authlearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025504039976-kmq63rk6l26rs31nkpjehphsbagcdil0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.authlearning",
+            "certificate_hash": "e0822aedaf1b5a6cb3fe6185a60ced3b9c4c7824"
+          }
+        },
+        {
+          "client_id": "1025504039976-3tjs03kritljgaa55e4qa04vdqdcgr44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc0_byHxMb3CfCa7oXyADa0KnpqVqkhM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025504039976-3tjs03kritljgaa55e4qa04vdqdcgr44.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1025504039976-7ele4v7rbots6gu99nph1f1fhqt20ecd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.authlearning"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
