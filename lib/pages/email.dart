@@ -1,4 +1,5 @@
 import 'package:authlearning/firebasemethod/firebaseauth.dart';
+import 'package:authlearning/pages/homepage.dart';
 import 'package:authlearning/utils/properties.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -19,8 +20,6 @@ TextEditingController _getEmail = TextEditingController();
 TextEditingController _getPass = TextEditingController();
 
 class _EmailLoginState extends State<EmailLogin> {
-  
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -35,17 +34,19 @@ class _EmailLoginState extends State<EmailLogin> {
                   SizedBox(
                     height: constraints.maxHeight * 0.3,
                   ),
-                  textField(context, "Enter Your Mail*",_getEmail),
+                  textField(context, "Enter Your Mail*", _getEmail),
                   const SizedBox(
                     height: 10,
                   ),
-                  textField(context, "Enter Your Password*",_getPass),
+                  textField(context, "Enter Your Password*", _getPass),
                   const SizedBox(
                     height: 10,
                   ),
                   ElevatedButton(
                       onPressed: () {
                         signUpUser(context);
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => HomePage()));
                         // dispose();
                       },
                       child: const Text("SignUp"))
@@ -57,5 +58,4 @@ class _EmailLoginState extends State<EmailLogin> {
       ),
     );
   }
- 
 }

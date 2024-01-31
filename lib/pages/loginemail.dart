@@ -1,4 +1,5 @@
 import 'package:authlearning/firebasemethod/firebaseauth.dart';
+import 'package:authlearning/pages/homepage.dart';
 import 'package:authlearning/utils/properties.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -12,10 +13,10 @@ class LoginEmail extends StatefulWidget {
 
 void loginUser(BuildContext context) async {
   await FirebaseAuthMethod(FirebaseAuth.instance).loginWithEmail(
-      email: _getLoginEmail.text, password: _getLoginPass.text, context: context);
+      email: _getLoginEmail.text,
+      password: _getLoginPass.text,
+      context: context);
 }
-
-
 
 TextEditingController _getLoginEmail = TextEditingController();
 TextEditingController _getLoginPass = TextEditingController();
@@ -42,17 +43,20 @@ class _EmailLoginState extends State<LoginEmail> {
                   SizedBox(
                     height: constraints.maxHeight * 0.3,
                   ),
-                  textField(context, "Enter Your Mail*",_getLoginEmail),
+                  textField(context, "Enter Your Mail*", _getLoginEmail),
                   const SizedBox(
                     height: 10,
                   ),
-                  textField(context, "Enter Your Password*",_getLoginPass),
+                  textField(context, "Enter Your Password*", _getLoginPass),
                   const SizedBox(
                     height: 10,
                   ),
                   ElevatedButton(
                       onPressed: () {
                         loginUser(context);
+                        Navigator.of(context).pop();
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => HomePage()));
                         // dispose();
                       },
                       child: const Text("Login"))
